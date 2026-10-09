@@ -4,25 +4,57 @@ import java.util.Scanner;
 public class CodeBreakers {
     public static final String ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
-    /** Returns true for one capital A–Z character. ch is not null. */
+    /**
+     * Determines whether ch is exactly one capital letter A-Z.
+     * Precondition: ch is not null. It may be empty or have any length.
+     * @param ch the string to check
+     * @return true if ch contains exactly one capital A-Z letter; false otherwise
+     */
     public static boolean isLetter(String ch) {
 
         return false;
     }
 
-    /** Shifts one character by any int value; wraps A–Z and preserves nonletters. */
+    /**
+     * Applies a Caesar shift to one character, wrapping within A-Z.
+     * Positive shifts move forward; negative shifts move backward.
+     * Precondition: ch is not null and has length 1. shift may be any int,
+     * including Integer.MIN_VALUE and Integer.MAX_VALUE.
+     * @param ch the single character to shift
+     * @param shift the signed number of alphabet positions to move
+     * @return the shifted capital letter, or ch unchanged if it is not A-Z
+     */
     public static String shiftLetter(String ch, int shift) {
 
         return ch;
     }
 
-    /** Shifts capital letters in a non-null message; preserves other characters. */
+    /**
+     * Applies the same signed Caesar shift to every capital letter in message.
+     * Use shiftLetter for each character. Preserve lowercase letters, digits,
+     * spaces and punctuation in their original positions.
+     * Precondition: message is not null; an empty string is valid.
+     * shift may be any int, including Integer.MIN_VALUE and Integer.MAX_VALUE.
+     * @param message the text to transform
+     * @param shift the signed number of alphabet positions to move
+     * @return the transformed string, with the same length as message;
+     *         an empty message returns an empty string
+     */
     public static String encrypt(String message, int shift) {
 
         return message;
     }
 
-    /** Restores a non-null message using its original encryption shift. */
+    /**
+     * Undoes encryption by reusing encrypt with the opposite normalized shift.
+     * Precondition: message is not null; an empty string is valid.
+     * shift is the ORIGINAL signed encryption shift, not its opposite.
+     * It may be any int, including Integer.MIN_VALUE and Integer.MAX_VALUE.
+     * @param message the ciphertext to decrypt
+     * @param shift the signed shift originally used to encrypt the message
+     * @return the string with that shift undone, preserving nonletters and length;
+     *         decrypt(encrypt(text, shift), shift) returns the original text
+     */
     public static String decrypt(String message, int shift) {
 
         return message;
