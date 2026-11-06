@@ -1,7 +1,10 @@
 # Iteration 3: generate candidate keys
 
-The outfit program visits every choice of shirt, pants, and shoes.
+The outfit program visits all 72 choices of shirt, pants, and shoes.
+Its clothing rule allows 66 outfits. The innermost loop and print statement
+therefore have different execution counts.
 Plan a driver that visits every required choice for Code Breakers.
+For this key search, visit every combination in the ranges below.
 
 The challenge uses exactly one Caesar shift (C), one repeating three-digit key (K),
 and one reversal (R). The encryption order and numerical keys are unknown.
