@@ -5,10 +5,19 @@
  */
 public class KeySearchPlan {
     public static void main(String[] args) {
-        // Which independent choices must the driver visit?
-        // What is the first and last value for each choice?
-        // What work belongs inside the innermost loop?
-        // How can a counter verify the traversal before decryption is ready?
-        // How will the final search retain the best candidate and its chain?
+        /*Possible orders: 
+        CKR   CRK   KCR   KRC   RCK   RKC
+
+        How many possible C shifts are there? (that are unique and non-equivalent) 
+        26
+        
+        How many possible K shifts are there? (that are unique and non-equivalent) 
+        ~ 2,000 (-999 through 999)
+        
+        How many possible R shifts are there? (that are unique and non-equivalent) 
+        just 1!*/
+
+        //below, loop through all the possibilities of encryption keys and print out each, and the total count. 
+
     }
 }
