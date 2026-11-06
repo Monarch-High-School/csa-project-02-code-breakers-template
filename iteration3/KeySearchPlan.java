@@ -5,6 +5,7 @@
  */
 public class KeySearchPlan {
     public static void main(String[] args) {
+        int count = 0;
         /*Possible orders: 
         CKR   CRK   KCR   KRC   RCK   RKC
 
@@ -18,6 +19,12 @@ public class KeySearchPlan {
         just 1!*/
 
         //below, loop through all the possibilities of encryption keys and print out each, and the total count. 
-
+        for (int c = 0; c < 26 ; c++){ 
+            for (int k = -999;  k < 1000; k++ ){
+                // compute each of CKR   CRK   KCR   KRC   RCK   RKC
+                count+= 6;
+            }
+        }
+        System.out.print(count);
     }
 }
